@@ -1,0 +1,15 @@
+<mat-form-field>
+  <mat-label>Введите диапазон дат</mat-label>
+  <mat-date-range-input
+    [min]="minDate"
+    [max]="maxDate"
+    [formGroup]="range"
+    [rangePicker]="picker"
+  >
+    <input formControlName="start" matStartDate placeholder="мм/дд/гггг" />
+    <input formControlName="end" matEndDate placeholder="мм/дд/гггг" />
+  </mat-date-range-input>
+  <!-- <mat-hint class="h-0">ММ/ДД/ГГГГ – ММ/ДД/ГГГГ</mat-hint> -->
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+</mat-form-field>

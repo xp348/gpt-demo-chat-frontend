@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 46px;
+  //   color: #292d34;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+button {
+  margin-top: 5px;
+}
+
+hr {
+  margin: auto 0;
+  @apply text-turquoise-500;
+}

@@ -1,0 +1,20 @@
+@for (item of listOfTitles;track item; let i = $index, e = $even) {
+
+<button
+  [ngClass]="{ link_active: i == selectedIndex }"
+  (click)="newSelectedIndex.emit(i)"
+>
+  {{ item }}</button
+>}
+<!-- <button routerLink="/TextPlotlyComponent" routerLinkActive="link_active">
+  TextPlotlyComponent
+</button>
+<button routerLink="/TextTailwindComponent" routerLinkActive="link_active">
+  TextTailwindComponent
+</button>
+<button
+  routerLink="/TextAngularMaterialComponent"
+  routerLinkActive="link_active"
+>
+  TextAngularMaterialComponent
+</button> -->

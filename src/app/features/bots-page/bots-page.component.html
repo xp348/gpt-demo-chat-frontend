@@ -1,0 +1,40 @@
+<app-side-menu></app-side-menu>
+
+<div class="flex-grow overflow-y-auto">
+  <div
+    class="mx-auto h-full flex flex-col md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]"
+  >
+    @for (item of messages; track item) {
+    <div class="flex gap-3 py-2">
+      <mat-icon class="min-w-min min-h-min">{{
+        item.type == "request" ? "person" : "sentiment_satisfied"
+      }}</mat-icon>
+      <div>
+        <p>
+          <b>{{ item.type == "request" ? "Вы" : "ChatGPT" }} </b>
+        </p>
+        <p>
+          {{ item.text }}
+        </p>
+        <p class="mt-1 flex gap-3 h-[28px]"></p>
+      </div>
+    </div>
+    }
+    <mat-form-field class="mt-auto" appearance="outline">
+      <input matInput [(ngModel)]="input" placeholder="Сообщение ChatGPT" />
+      <button
+        [disabled]="input == ''"
+        mat-icon-button
+        matSuffix
+        (click)="send()"
+      >
+        <!-- (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" -->
+        <mat-icon>arrow_upward</mat-icon>
+      </button>
+      <mat-hint class="text-center w-full"
+        >ChatGPT может допускать ошибки. Рекомендуем проверять важную
+        информацию.</mat-hint
+      >
+    </mat-form-field>
+  </div>
+</div>

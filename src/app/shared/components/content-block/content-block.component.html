@@ -1,0 +1,14 @@
+<div
+  class="relative px-[24px] py-[16px] mb-[16px] mt-[32px] border-[1px] border-[#3f4948] border-solid rounded-xl"
+  [style.width]="width"
+>
+  <div class="absolute px-2 mt-[-32px] bg-black text-xl">{{ title }}</div>
+
+  <div
+    class="grid"
+    [style.gap]="gap"
+    [style.grid-template-columns]="'repeat(' + columns + ', minmax(0, 1fr))'"
+  >
+    <ng-content></ng-content>
+  </div>
+</div>
