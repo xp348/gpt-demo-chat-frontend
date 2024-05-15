@@ -1,5 +1,5 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { StorageModule } from './store/store.module';
 import { environment } from '../../environments/environment';
 import { API_URL, FINAM_URL } from './tokens/base-url.token';
@@ -9,6 +9,9 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { AuthenticationInterceptor } from './interceptors/authentication.interceptor';
 import { RetryInterceptor } from './interceptors/retry.interceptor';
 import { ApiModule, Configuration, ConfigurationParameters } from './api';
+import localeRu from '@angular/common/locales/ru';
+
+registerLocaleData(localeRu);
 
 export function apiParams(): Configuration {
   const params: ConfigurationParameters = {

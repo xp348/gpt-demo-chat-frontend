@@ -1,3 +1,11 @@
+<img
+  class="w-[50%] mx-auto"
+  [src]="'v-combi-logo-color' | rmMapper : svgPathMapper"
+  alt="v-combi-logo-color"
+/>
+<div class="m-3">
+  <button color="accent" mat-flat-button>Новый чат</button>
+</div>
 @for (item of listOfTitles;track item; let i = $index, e = $even) {
 
 <button

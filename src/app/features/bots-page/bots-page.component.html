@@ -9,9 +9,10 @@
       <mat-icon class="min-w-min min-h-min">{{
         item.type == "request" ? "person" : "sentiment_satisfied"
       }}</mat-icon>
-      <div>
-        <p>
-          <b>{{ item.type == "request" ? "Вы" : "ChatGPT" }} </b>
+      <div class="w-full">
+        <p class="w-full flex justify-between">
+          <b>{{ item.type == "request" ? "Вы" : "BM Assistant" }} </b>
+          <a class="opacity-50">{{ item.date | date : "dd.MM.yyyy" }}</a>
         </p>
         <p>
           {{ item.text }}
@@ -20,8 +21,12 @@
       </div>
     </div>
     }
-    <mat-form-field class="mt-auto" appearance="outline">
-      <input matInput [(ngModel)]="input" placeholder="Сообщение ChatGPT" />
+    <mat-form-field class="mt-auto mb-2" appearance="outline">
+      <input
+        matInput
+        [(ngModel)]="input"
+        placeholder="Сообщение BM Assistant"
+      />
       <button
         [disabled]="input == ''"
         mat-icon-button
@@ -29,12 +34,12 @@
         (click)="send()"
       >
         <!-- (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" -->
-        <mat-icon>arrow_upward</mat-icon>
+        <mat-icon>switch_access_shortcut</mat-icon>
       </button>
-      <mat-hint class="text-center w-full"
-        >ChatGPT может допускать ошибки. Рекомендуем проверять важную
+      <!-- <mat-hint class="text-center w-full"
+        >BM Assistant может допускать ошибки. Рекомендуем проверять важную
         информацию.</mat-hint
-      >
+      > -->
     </mat-form-field>
   </div>
 </div>

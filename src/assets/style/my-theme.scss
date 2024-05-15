@@ -220,12 +220,17 @@ $theme: mat.define-light-theme(
 //   // --mat-datepicker-calendar-header-text-color: rgba(0, 0, 0, 0.54);
 // }
 
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+$white: theme("colors.white");
+$black: theme("colors.black");
 :root {
   --mat-app-background-color: #191c1c;
-  --mat-app-text-color: #e0e3e2;
+  --mat-app-text-color: $white;
   --mat-ripple-color: rgba(224, 227, 226, 0.1);
   --mat-option-selected-state-label-text-color: #cce8e7;
-  --mat-option-label-text-color: #e0e3e2;
+  --mat-option-label-text-color: $white;
   --mat-option-hover-state-layer-color: rgba(224, 227, 226, 0.08);
   --mat-option-focus-state-layer-color: rgba(224, 227, 226, 0.12);
   --mat-option-selected-state-layer-color: #324b4b;
@@ -267,7 +272,7 @@ $theme: mat.define-light-theme(
     0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   --mdc-outlined-card-container-shape: 12px;
   --mdc-outlined-card-outline-width: 1px;
-  --mat-card-subtitle-text-color: #e0e3e2;
+  --mat-card-subtitle-text-color: $white;
   --mat-card-title-text-font: Roboto, sans-serif;
   --mat-card-title-text-line-height: 1.75rem;
   --mat-card-title-text-size: 1.375rem;
@@ -283,7 +288,7 @@ $theme: mat.define-light-theme(
   --mdc-linear-progress-active-indicator-height: 4px;
   --mdc-linear-progress-track-height: 4px;
   --mdc-linear-progress-track-shape: 0px;
-  --mdc-plain-tooltip-container-color: #e0e3e2;
+  --mdc-plain-tooltip-container-color: $white;
   --mdc-plain-tooltip-supporting-text-color: #2d3131;
   --mdc-plain-tooltip-supporting-text-line-height: 1rem;
   --mdc-plain-tooltip-supporting-text-font: Roboto, sans-serif;
@@ -299,7 +304,7 @@ $theme: mat.define-light-theme(
   --mdc-filled-text-field-label-text-color: #bec9c8;
   --mdc-filled-text-field-hover-label-text-color: #bec9c8;
   --mdc-filled-text-field-disabled-label-text-color: rgba(224, 227, 226, 0.38);
-  --mdc-filled-text-field-input-text-color: #e0e3e2;
+  --mdc-filled-text-field-input-text-color: $white;
   --mdc-filled-text-field-disabled-input-text-color: rgba(224, 227, 226, 0.38);
   --mdc-filled-text-field-input-text-placeholder-color: #bec9c8;
   --mdc-filled-text-field-error-hover-label-text-color: #ffdad6;
@@ -312,7 +317,7 @@ $theme: mat.define-light-theme(
     226,
     0.38
   );
-  --mdc-filled-text-field-hover-active-indicator-color: #e0e3e2;
+  --mdc-filled-text-field-hover-active-indicator-color: $white;
   --mdc-filled-text-field-error-active-indicator-color: #ffb4ab;
   --mdc-filled-text-field-error-focus-active-indicator-color: #ffb4ab;
   --mdc-filled-text-field-error-hover-active-indicator-color: #ffdad6;
@@ -327,14 +332,14 @@ $theme: mat.define-light-theme(
   --mdc-outlined-text-field-focus-outline-color: #00dddd;
   --mdc-outlined-text-field-focus-label-text-color: #00dddd;
   --mdc-outlined-text-field-label-text-color: #bec9c8;
-  --mdc-outlined-text-field-hover-label-text-color: #e0e3e2;
+  --mdc-outlined-text-field-hover-label-text-color: $white;
   --mdc-outlined-text-field-disabled-label-text-color: rgba(
     224,
     227,
     226,
     0.38
   );
-  --mdc-outlined-text-field-input-text-color: #e0e3e2;
+  --mdc-outlined-text-field-input-text-color: $white;
   --mdc-outlined-text-field-disabled-input-text-color: rgba(
     224,
     227,
@@ -347,7 +352,7 @@ $theme: mat.define-light-theme(
   --mdc-outlined-text-field-error-hover-label-text-color: #ffdad6;
   --mdc-outlined-text-field-outline-color: #889392;
   --mdc-outlined-text-field-disabled-outline-color: rgba(224, 227, 226, 0.12);
-  --mdc-outlined-text-field-hover-outline-color: #e0e3e2;
+  --mdc-outlined-text-field-hover-outline-color: $white;
   --mdc-outlined-text-field-error-focus-outline-color: #ffb4ab;
   --mdc-outlined-text-field-error-hover-outline-color: #ffdad6;
   --mdc-outlined-text-field-error-outline-color: #ffb4ab;
@@ -365,7 +370,7 @@ $theme: mat.define-light-theme(
     226,
     0.38
   );
-  --mat-form-field-state-layer-color: #e0e3e2;
+  --mat-form-field-state-layer-color: $white;
   --mat-form-field-error-text-color: #ffb4ab;
   --mat-form-field-select-option-text-color: #191c1c;
   --mat-form-field-select-disabled-option-text-color: rgba(25, 28, 28, 0.38);
@@ -396,7 +401,7 @@ $theme: mat.define-light-theme(
   --mat-form-field-filled-with-label-container-padding-bottom: 8px;
   --mat-form-field-focus-state-layer-opacity: 0;
   --mat-select-panel-background-color: #1d2020;
-  --mat-select-enabled-trigger-text-color: #e0e3e2;
+  --mat-select-enabled-trigger-text-color: $white;
   --mat-select-disabled-trigger-text-color: rgba(224, 227, 226, 0.38);
   --mat-select-placeholder-text-color: #bec9c8;
   --mat-select-enabled-arrow-color: #bec9c8;
@@ -419,7 +424,7 @@ $theme: mat.define-light-theme(
     0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
   --mdc-dialog-container-shadow-color: #000;
   --mdc-dialog-container-color: #191c1c;
-  --mdc-dialog-subhead-color: #e0e3e2;
+  --mdc-dialog-subhead-color: $white;
   --mdc-dialog-supporting-text-color: #bec9c8;
   --mdc-dialog-subhead-font: Roboto, sans-serif;
   --mdc-dialog-subhead-line-height: 2rem;
@@ -457,9 +462,9 @@ $theme: mat.define-light-theme(
   --mdc-chip-label-text-color: #bec9c8;
   --mdc-chip-selected-label-text-color: #cce8e7;
   --mdc-chip-with-icon-icon-color: #bec9c8;
-  --mdc-chip-with-icon-disabled-icon-color: #e0e3e2;
+  --mdc-chip-with-icon-disabled-icon-color: $white;
   --mdc-chip-with-icon-selected-icon-color: #cce8e7;
-  --mdc-chip-with-trailing-icon-disabled-trailing-icon-color: #e0e3e2;
+  --mdc-chip-with-trailing-icon-disabled-trailing-icon-color: $white;
   --mdc-chip-with-trailing-icon-trailing-icon-color: #bec9c8;
   --mdc-chip-label-text-font: Roboto, sans-serif;
   --mdc-chip-label-text-line-height: 1.25rem;
@@ -480,7 +485,7 @@ $theme: mat.define-light-theme(
   --mat-chip-selected-trailing-action-state-layer-color: #cce8e7;
   --mat-chip-trailing-action-hover-state-layer-opacity: 0.08;
   --mat-chip-trailing-action-focus-state-layer-opacity: 0.12;
-  --mat-chip-selected-disabled-trailing-icon-color: #e0e3e2;
+  --mat-chip-selected-disabled-trailing-icon-color: $white;
   --mat-chip-selected-trailing-icon-color: #cce8e7;
   --mat-chip-disabled-container-opacity: 1;
   --mat-chip-trailing-action-opacity: 1;
@@ -503,22 +508,22 @@ $theme: mat.define-light-theme(
   --mdc-switch-selected-pressed-track-color: #00dddd;
   --mdc-switch-selected-track-color: #00dddd;
   --mdc-switch-disabled-selected-handle-color: #191c1c;
-  --mdc-switch-disabled-selected-icon-color: #e0e3e2;
-  --mdc-switch-disabled-selected-track-color: #e0e3e2;
-  --mdc-switch-disabled-unselected-handle-color: #e0e3e2;
+  --mdc-switch-disabled-selected-icon-color: $white;
+  --mdc-switch-disabled-selected-track-color: $white;
+  --mdc-switch-disabled-unselected-handle-color: $white;
   --mdc-switch-disabled-unselected-icon-color: #3f4948;
   --mdc-switch-disabled-unselected-track-color: #3f4948;
   --mdc-switch-selected-icon-color: #00fbfb;
   --mdc-switch-unselected-focus-handle-color: #bec9c8;
-  --mdc-switch-unselected-focus-state-layer-color: #e0e3e2;
+  --mdc-switch-unselected-focus-state-layer-color: $white;
   --mdc-switch-unselected-focus-track-color: #3f4948;
   --mdc-switch-unselected-handle-color: #889392;
   --mdc-switch-unselected-hover-handle-color: #bec9c8;
-  --mdc-switch-unselected-hover-state-layer-color: #e0e3e2;
+  --mdc-switch-unselected-hover-state-layer-color: $white;
   --mdc-switch-unselected-hover-track-color: #3f4948;
   --mdc-switch-unselected-icon-color: #3f4948;
   --mdc-switch-unselected-pressed-handle-color: #bec9c8;
-  --mdc-switch-unselected-pressed-state-layer-color: #e0e3e2;
+  --mdc-switch-unselected-pressed-state-layer-color: $white;
   --mdc-switch-unselected-pressed-track-color: #3f4948;
   --mdc-switch-unselected-track-color: #3f4948;
   --mdc-switch-disabled-selected-icon-opacity: 0.38;
@@ -532,7 +537,7 @@ $theme: mat.define-light-theme(
   --mdc-switch-unselected-icon-size: 16px;
   --mdc-switch-state-layer-size: 40px;
   --mat-switch-track-outline-color: #889392;
-  --mat-switch-disabled-unselected-track-outline-color: #e0e3e2;
+  --mat-switch-disabled-unselected-track-outline-color: $white;
   --mat-switch-disabled-selected-handle-opacity: 1;
   --mat-switch-disabled-unselected-handle-opacity: 0.38;
   --mat-switch-unselected-handle-size: 16px;
@@ -552,11 +557,11 @@ $theme: mat.define-light-theme(
   --mat-switch-track-outline-width: 2px;
   --mat-switch-selected-track-outline-width: 0;
   --mat-switch-disabled-unselected-track-outline-width: 2px;
-  --mdc-radio-disabled-selected-icon-color: #e0e3e2;
-  --mdc-radio-disabled-unselected-icon-color: #e0e3e2;
-  --mdc-radio-unselected-hover-icon-color: #e0e3e2;
+  --mdc-radio-disabled-selected-icon-color: $white;
+  --mdc-radio-disabled-unselected-icon-color: $white;
+  --mdc-radio-unselected-hover-icon-color: $white;
   --mdc-radio-unselected-icon-color: #bec9c8;
-  --mdc-radio-unselected-pressed-icon-color: #e0e3e2;
+  --mdc-radio-unselected-pressed-icon-color: $white;
   --mdc-radio-selected-focus-icon-color: #00dddd;
   --mdc-radio-selected-hover-icon-color: #00dddd;
   --mdc-radio-selected-icon-color: #00dddd;
@@ -564,7 +569,7 @@ $theme: mat.define-light-theme(
   --mdc-radio-state-layer-size: 40px;
   --mdc-radio-disabled-selected-icon-opacity: 0.38;
   --mdc-radio-disabled-unselected-icon-opacity: 0.38;
-  --mat-radio-ripple-color: #e0e3e2;
+  --mat-radio-ripple-color: $white;
   --mat-radio-checked-ripple-color: #00dddd;
   --mat-radio-disabled-label-color: rgba(224, 227, 226, 0.38);
   --mat-radio-touch-target-display: block;
@@ -575,13 +580,13 @@ $theme: mat.define-light-theme(
   --mdc-slider-inactive-track-color: #3f4948;
   --mdc-slider-with-tick-marks-inactive-container-color: #bec9c8;
   --mdc-slider-with-tick-marks-active-container-color: #003737;
-  --mdc-slider-disabled-active-track-color: #e0e3e2;
-  --mdc-slider-disabled-handle-color: #e0e3e2;
-  --mdc-slider-disabled-inactive-track-color: #e0e3e2;
+  --mdc-slider-disabled-active-track-color: $white;
+  --mdc-slider-disabled-handle-color: $white;
+  --mdc-slider-disabled-inactive-track-color: $white;
   --mdc-slider-label-container-color: #00dddd;
   --mdc-slider-label-label-text-color: #003737;
   --mdc-slider-with-overlap-handle-outline-color: #003737;
-  --mdc-slider-with-tick-marks-disabled-container-color: #e0e3e2;
+  --mdc-slider-with-tick-marks-disabled-container-color: $white;
   --mdc-slider-handle-elevation: 1;
   --mdc-slider-handle-shadow-color: #000000;
   --mdc-slider-label-label-text-font: Roboto, sans-serif;
@@ -613,7 +618,7 @@ $theme: mat.define-light-theme(
   --mat-slider-value-indicator-container-transform: translateX(-50%)
     rotate(-45deg);
   --mat-slider-value-indicator-opacity: 1;
-  --mat-menu-item-label-text-color: #e0e3e2;
+  --mat-menu-item-label-text-color: $white;
   --mat-menu-item-icon-color: #bec9c8;
   --mat-menu-item-hover-state-layer-color: rgba(224, 227, 226, 0.08);
   --mat-menu-item-focus-state-layer-color: rgba(224, 227, 226, 0.12);
@@ -635,22 +640,22 @@ $theme: mat.define-light-theme(
   --mat-menu-item-with-icon-trailing-spacing: 12px;
   --mdc-list-list-item-container-color: transparent;
   --mdc-list-list-item-leading-avatar-color: #004f4f;
-  --mdc-list-list-item-disabled-state-layer-color: #e0e3e2;
+  --mdc-list-list-item-disabled-state-layer-color: $white;
   --mdc-list-list-item-disabled-state-layer-opacity: 0.12;
-  --mdc-list-list-item-label-text-color: #e0e3e2;
+  --mdc-list-list-item-label-text-color: $white;
   --mdc-list-list-item-supporting-text-color: #bec9c8;
   --mdc-list-list-item-leading-icon-color: #bec9c8;
   --mdc-list-list-item-trailing-supporting-text-color: #bec9c8;
   --mdc-list-list-item-trailing-icon-color: #bec9c8;
   --mdc-list-list-item-selected-trailing-icon-color: #00dddd;
-  --mdc-list-list-item-disabled-label-text-color: #e0e3e2;
-  --mdc-list-list-item-disabled-leading-icon-color: #e0e3e2;
-  --mdc-list-list-item-disabled-trailing-icon-color: #e0e3e2;
-  --mdc-list-list-item-hover-label-text-color: #e0e3e2;
-  --mdc-list-list-item-focus-label-text-color: #e0e3e2;
-  --mdc-list-list-item-hover-state-layer-color: #e0e3e2;
+  --mdc-list-list-item-disabled-label-text-color: $white;
+  --mdc-list-list-item-disabled-leading-icon-color: $white;
+  --mdc-list-list-item-disabled-trailing-icon-color: $white;
+  --mdc-list-list-item-hover-label-text-color: $white;
+  --mdc-list-list-item-focus-label-text-color: $white;
+  --mdc-list-list-item-hover-state-layer-color: $white;
   --mdc-list-list-item-hover-state-layer-opacity: 0.08;
-  --mdc-list-list-item-focus-state-layer-color: #e0e3e2;
+  --mdc-list-list-item-focus-state-layer-color: $white;
   --mdc-list-list-item-focus-state-layer-opacity: 0.12;
   --mdc-list-list-item-label-text-font: Roboto, sans-serif;
   --mdc-list-list-item-label-text-line-height: 1.5rem;
@@ -682,7 +687,7 @@ $theme: mat.define-light-theme(
   --mat-list-list-item-leading-icon-start-space: 16px;
   --mat-list-list-item-leading-icon-end-space: 16px;
   --mat-list-active-indicator-shape: 9999px;
-  --mat-paginator-container-text-color: #e0e3e2;
+  --mat-paginator-container-text-color: $white;
   --mat-paginator-container-background-color: #191c1c;
   --mat-paginator-enabled-icon-color: #bec9c8;
   --mat-paginator-disabled-icon-color: rgba(224, 227, 226, 0.38);
@@ -700,15 +705,15 @@ $theme: mat.define-light-theme(
   --mdc-tab-indicator-active-indicator-height: 2px;
   --mdc-tab-indicator-active-indicator-shape: 0;
   --mat-tab-header-divider-color: #3f4948;
-  --mat-tab-header-pagination-icon-color: #e0e3e2;
-  --mat-tab-header-inactive-label-text-color: #e0e3e2;
-  --mat-tab-header-active-label-text-color: #e0e3e2;
-  --mat-tab-header-active-ripple-color: #e0e3e2;
-  --mat-tab-header-inactive-ripple-color: #e0e3e2;
-  --mat-tab-header-inactive-focus-label-text-color: #e0e3e2;
-  --mat-tab-header-inactive-hover-label-text-color: #e0e3e2;
-  --mat-tab-header-active-focus-label-text-color: #e0e3e2;
-  --mat-tab-header-active-hover-label-text-color: #e0e3e2;
+  --mat-tab-header-pagination-icon-color: $white;
+  --mat-tab-header-inactive-label-text-color: $white;
+  --mat-tab-header-active-label-text-color: $white;
+  --mat-tab-header-active-ripple-color: $white;
+  --mat-tab-header-inactive-ripple-color: $white;
+  --mat-tab-header-inactive-focus-label-text-color: $white;
+  --mat-tab-header-inactive-hover-label-text-color: $white;
+  --mat-tab-header-active-focus-label-text-color: $white;
+  --mat-tab-header-active-hover-label-text-color: $white;
   --mat-tab-header-active-focus-indicator-color: #00dddd;
   --mat-tab-header-active-hover-indicator-color: #00dddd;
   --mat-tab-header-label-text-font: Roboto, sans-serif;
@@ -731,18 +736,18 @@ $theme: mat.define-light-theme(
   --mdc-checkbox-selected-hover-icon-color: #00dddd;
   --mdc-checkbox-selected-icon-color: #00dddd;
   --mdc-checkbox-selected-pressed-icon-color: #00dddd;
-  --mdc-checkbox-unselected-focus-icon-color: #e0e3e2;
-  --mdc-checkbox-unselected-hover-icon-color: #e0e3e2;
+  --mdc-checkbox-unselected-focus-icon-color: $white;
+  --mdc-checkbox-unselected-hover-icon-color: $white;
   --mdc-checkbox-unselected-icon-color: #bec9c8;
-  --mdc-checkbox-unselected-pressed-icon-color: #e0e3e2;
+  --mdc-checkbox-unselected-pressed-icon-color: $white;
   --mdc-checkbox-selected-focus-state-layer-color: #00dddd;
   --mdc-checkbox-selected-hover-state-layer-color: #00dddd;
-  --mdc-checkbox-selected-pressed-state-layer-color: #e0e3e2;
-  --mdc-checkbox-unselected-focus-state-layer-color: #e0e3e2;
-  --mdc-checkbox-unselected-hover-state-layer-color: #e0e3e2;
+  --mdc-checkbox-selected-pressed-state-layer-color: $white;
+  --mdc-checkbox-unselected-focus-state-layer-color: $white;
+  --mdc-checkbox-unselected-hover-state-layer-color: $white;
   --mdc-checkbox-unselected-pressed-state-layer-color: #00dddd;
   --mdc-checkbox-state-layer-size: 40px;
-  --mdc-form-field-label-text-color: #e0e3e2;
+  --mdc-form-field-label-text-color: $white;
   --mdc-form-field-label-text-font: Roboto, sans-serif;
   --mdc-form-field-label-text-line-height: 1.25rem;
   --mdc-form-field-label-text-size: 0.875rem;
@@ -909,7 +914,7 @@ $theme: mat.define-light-theme(
   --mat-fab-small-pressed-state-layer-opacity: 0.12;
   --mat-fab-small-disabled-state-container-color: rgba(224, 227, 226, 0.12);
   --mat-fab-small-disabled-state-foreground-color: rgba(224, 227, 226, 0.38);
-  --mdc-snackbar-container-color: #e0e3e2;
+  --mdc-snackbar-container-color: $white;
   --mdc-snackbar-supporting-text-color: #2d3131;
   --mdc-snackbar-supporting-text-font: Roboto, sans-serif;
   --mdc-snackbar-supporting-text-line-height: 1.25rem;
@@ -918,8 +923,8 @@ $theme: mat.define-light-theme(
   --mdc-snackbar-container-shape: 4px;
   --mat-snack-bar-button-color: #006a6a;
   --mat-table-background-color: #191c1c;
-  --mat-table-header-headline-color: #e0e3e2;
-  --mat-table-row-item-label-text-color: #e0e3e2;
+  --mat-table-header-headline-color: $white;
+  --mat-table-row-item-label-text-color: $white;
   --mat-table-row-item-outline-color: #3f4948;
   --mat-table-header-headline-font: Roboto, sans-serif;
   --mat-table-header-headline-line-height: 1.25rem;
@@ -968,7 +973,7 @@ $theme: mat.define-light-theme(
   --mat-badge-small-size-container-padding: 0;
   --mat-badge-large-size-container-padding: 0 4px;
   --mat-badge-small-size-text-size: 0;
-  --mat-bottom-sheet-container-text-color: #e0e3e2;
+  --mat-bottom-sheet-container-text-color: $white;
   --mat-bottom-sheet-container-background-color: #191c1c;
   --mat-bottom-sheet-container-text-font: Roboto, sans-serif;
   --mat-bottom-sheet-container-text-line-height: 1.5rem;
@@ -978,8 +983,8 @@ $theme: mat.define-light-theme(
   --mat-bottom-sheet-container-shape: 28px;
   --mat-standard-button-toggle-hover-state-layer-opacity: 0.08;
   --mat-standard-button-toggle-focus-state-layer-opacity: 0.12;
-  --mat-standard-button-toggle-text-color: #e0e3e2;
-  --mat-standard-button-toggle-state-layer-color: #e0e3e2;
+  --mat-standard-button-toggle-text-color: $white;
+  --mat-standard-button-toggle-state-layer-color: $white;
   --mat-standard-button-toggle-selected-state-background-color: #324b4b;
   --mat-standard-button-toggle-selected-state-text-color: #cce8e7;
   --mat-standard-button-toggle-disabled-state-text-color: rgba(
@@ -1037,7 +1042,7 @@ $theme: mat.define-light-theme(
   --mat-datepicker-calendar-date-in-overlap-range-state-background-color: #324b4b;
   --mat-datepicker-calendar-date-in-overlap-range-selected-state-background-color: #b0cccb;
   --mat-datepicker-toggle-icon-color: #bec9c8;
-  --mat-datepicker-calendar-body-label-text-color: #e0e3e2;
+  --mat-datepicker-calendar-body-label-text-color: $white;
   --mat-datepicker-calendar-period-button-text-color: #bec9c8;
   --mat-datepicker-calendar-period-button-icon-color: #bec9c8;
   --mat-datepicker-calendar-navigation-button-icon-color: #bec9c8;
@@ -1049,7 +1054,7 @@ $theme: mat.define-light-theme(
     226,
     0.38
   );
-  --mat-datepicker-calendar-date-text-color: #e0e3e2;
+  --mat-datepicker-calendar-date-text-color: $white;
   --mat-datepicker-calendar-date-disabled-state-text-color: rgba(
     224,
     227,
@@ -1057,7 +1062,7 @@ $theme: mat.define-light-theme(
     0.38
   );
   --mat-datepicker-calendar-date-preview-state-outline-color: #00dddd;
-  --mat-datepicker-range-input-separator-color: #e0e3e2;
+  --mat-datepicker-range-input-separator-color: $white;
   --mat-datepicker-range-input-disabled-state-separator-color: rgba(
     224,
     227,
@@ -1071,7 +1076,7 @@ $theme: mat.define-light-theme(
     0.38
   );
   --mat-datepicker-calendar-container-background-color: #272b2b;
-  --mat-datepicker-calendar-container-text-color: #e0e3e2;
+  --mat-datepicker-calendar-container-text-color: $white;
   --mat-datepicker-calendar-text-font: Roboto, sans-serif;
   --mat-datepicker-calendar-text-size: 1rem;
   --mat-datepicker-calendar-body-label-text-size: 0.875rem;
@@ -1093,12 +1098,12 @@ $theme: mat.define-light-theme(
   --mat-divider-color: #3f4948;
   --mat-divider-width: 1px;
   --mat-expansion-container-background-color: #191c1c;
-  --mat-expansion-container-text-color: #e0e3e2;
+  --mat-expansion-container-text-color: $white;
   --mat-expansion-actions-divider-color: #3f4948;
   --mat-expansion-header-hover-state-layer-color: rgba(224, 227, 226, 0.08);
   --mat-expansion-header-focus-state-layer-color: rgba(224, 227, 226, 0.12);
   --mat-expansion-header-disabled-state-text-color: rgba(224, 227, 226, 0.38);
-  --mat-expansion-header-text-color: #e0e3e2;
+  --mat-expansion-header-text-color: $white;
   --mat-expansion-header-description-color: #bec9c8;
   --mat-expansion-header-indicator-color: #bec9c8;
   --mat-expansion-header-text-font: Roboto, sans-serif;
@@ -1128,7 +1133,7 @@ $theme: mat.define-light-theme(
   --mat-sidenav-container-background-color: #191c1c;
   --mat-sidenav-container-text-color: #bec9c8;
   --mat-sidenav-content-background-color: #191c1c;
-  --mat-sidenav-content-text-color: #e0e3e2;
+  --mat-sidenav-content-text-color: $white;
   --mat-sidenav-scrim-color: rgba(41, 50, 50, 0.4);
   --mat-sidenav-container-shape: 16px;
   --mat-sidenav-container-elevation-shadow: none;
@@ -1161,9 +1166,9 @@ $theme: mat.define-light-theme(
   --mat-stepper-header-focus-state-layer-shape: 12px;
   --mat-stepper-header-hover-state-layer-shape: 12px;
   --mat-stepper-header-error-state-icon-background-color: transparent;
-  --mat-sort-arrow-color: #e0e3e2;
+  --mat-sort-arrow-color: $white;
   --mat-toolbar-container-background-color: #191c1c;
-  --mat-toolbar-container-text-color: #e0e3e2;
+  --mat-toolbar-container-text-color: $white;
   --mat-toolbar-title-text-font: Roboto, sans-serif;
   --mat-toolbar-title-text-line-height: 1.75rem;
   --mat-toolbar-title-text-size: 1.375rem;
@@ -1172,7 +1177,7 @@ $theme: mat.define-light-theme(
   --mat-toolbar-standard-height: 64px;
   --mat-toolbar-mobile-height: 56px;
   --mat-tree-container-background-color: #191c1c;
-  --mat-tree-node-text-color: #e0e3e2;
+  --mat-tree-node-text-color: $white;
   --mat-tree-node-text-font: Roboto, sans-serif;
   --mat-tree-node-text-size: 1rem;
   --mat-tree-node-text-weight: 400;
@@ -1180,10 +1185,10 @@ $theme: mat.define-light-theme(
 }
 
 .mat-mdc-tab-group {
-  --mat-tab-header-inactive-label-text-color: #e0e3e2;
-  --mat-tab-header-inactive-hover-label-text-color: #e0e3e2;
+  --mat-tab-header-inactive-label-text-color: $white;
+  --mat-tab-header-inactive-hover-label-text-color: $white;
 }
 .mdc-label {
-  color: #e0e3e2;
+  color: $white;
   border-width: 0px;
 }

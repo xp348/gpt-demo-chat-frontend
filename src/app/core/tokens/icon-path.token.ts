@@ -3,7 +3,7 @@ import { InjectionToken } from '@angular/core';
 export type IconPathType = (iconName: string) => string;
 
 const iconPathMapper: IconPathType = (iconName: string) => {
-  return `/assets/icons/${iconName}`;
+  return `/assets/icons/${iconName}.ico`;
 };
 
 export const ICON_PATH = new InjectionToken<IconPathType>(
